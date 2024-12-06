@@ -15,7 +15,7 @@
         Caps {
             bindings = <&kp CAPS>;
             key-positions = <24 35>;
-            timeout-ms = <100>;
+            timeout-ms = <200>;
         };
 
         Escape {
