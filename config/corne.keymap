@@ -12,16 +12,11 @@
     combos {
         compatible = "zmk,combos";
 
-        Caps {
-            bindings = <&kp CAPS>;
-            key-positions = <24 35>;
-            timeout-ms = <200>;
-        };
-
         Escape {
             bindings = <&kp ESC>;
-            key-positions = <38 39>;
+            key-positions = <19 20>;
             timeout-ms = <100>;
+            layers = <0>;
         };
     };
 
@@ -66,10 +61,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &bspc_or_del
-&kp LCTRL       &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&shift_or_caps  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                              &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB   &kp Q        &kp W           &kp E           &kp R         &lt 3 T      &kp Y    &kp U         &kp I            &kp O            &kp P      &kp ESC
+&trans    &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LSHIFT F  &kp G        &kp H    &mt RSHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &kp RCTRL  &trans
+&kp CAPS  &kp Z        &kp X           &kp C           &kp V         &kp B        &kp N    &kp M         &kp BACKSPACE    &kp DEL          &trans     &kp GLOBE
+                                       &mo 2           &mo 1         &kp SPACE    &kp RET  &mo 2         &mo 1
             >;
         };
 
@@ -80,12 +75,12 @@
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Nav";
+            display-name = "Nums";
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0     &kp BACKSPACE
-&trans     &trans  &trans  &trans    &trans  &trans       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp RCTRL  &trans
-&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &trans    &trans    &trans    &trans     &trans     &kp RSHIFT
-                           &kp LGUI  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
+&kp F1      &kp F2                 &kp F3                    &kp F4                    &kp F5                  &kp F6             &kp F7           &kp F8                  &kp F9                     &kp F10                    &kp F11                &kp F12
+&trans      &mt LCTRL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_GUI KP_NUMBER_3  &mt LSHIFT KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &mt RSHIFT KP_NUMBER_7  &mt RIGHT_GUI KP_NUMBER_8  &mt RIGHT_ALT KP_NUMBER_9  &mt RCTRL KP_NUMBER_0  &trans
+&bt BT_CLR  &bt BT_SEL 0           &bt BT_SEL 1              &bt BT_SEL 2              &bt BT_SEL 3            &bt BT_SEL 4       &trans           &kp C_MUTE              &kp C_VOL_DN               &kp C_VOL_UP               &kp C_PP               &trans
+                                                             &trans                    &trans                  &trans             &trans           &trans                  &trans
             >;
         };
 
@@ -98,30 +93,24 @@
 
             display-name = "Symbols";
             bindings = <
-&kp TAB    &kp N1     &kp N2    &kp N3            &kp N4             &kp N5       &kp N6   &kp N7  &kp N8    &kp N9  &kp N0     &kp BSPC
-&kp LCTRL  &kp GRAVE  &kp BSLH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL    &trans   &trans  &trans    &trans  &kp RCTRL  &trans
-&kp LSHFT  &trans     &trans    &trans            &trans             &trans       &trans   &trans  &trans    &trans  &trans     &kp RSHIFT
-                                &kp LGUI          &trans             &kp MINUS    &kp RET  &trans  &kp RALT
+&trans  &kp DLLR         &kp EXCL           &kp LPAR                   &kp RPAR                  &kp PRCNT    &kp CARET  &kp AMPS       &kp HASH                 &kp STAR           &kp AT           &trans
+&trans  &mt LCTRL GRAVE  &mt LEFT_ALT PIPE  &mt LEFT_GUI LEFT_BRACKET  &mt LSHIFT RIGHT_BRACKET  &kp EQUAL    &kp LT     &mt RSHIFT GT  &mt RIGHT_GUI SEMICOLON  &mt RIGHT_ALT SQT  &mt RCTRL SLASH  &trans
+&trans  &kp TILDE        &kp BACKSLASH      &kp LBRC                   &kp RBRC                  &kp PLUS     &kp COMMA  &kp PERIOD     &kp COLON                &kp DQT            &kp QMARK        &trans
+                                            &trans                     &trans                    &kp MINUS    &trans     &trans         &trans
             >;
         };
 
-        tri_layer {
-            display-name = "FNs";
+        layer_3 {
             bindings = <
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans         &trans      &trans        &trans        &trans    &bt BT_CLR
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7         &kp F8      &kp F9        &kp F10       &kp F11   &kp F12
-&kp LSHIFT  &trans        &trans        &trans        &trans        &trans          &next_or_prev  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &kp RSHIFT
-                                        &trans        &trans        &trans          &trans         &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans    &trans    &trans
             >;
+
+            label = "Nav";
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        BT-Settings {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
