@@ -61,9 +61,9 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB   &kp Q        &kp W           &kp E           &kp R         &lt 3 T      &kp Y    &kp U         &kp I            &kp O            &kp P      &kp ESC
-&trans    &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LSHIFT F  &kp G        &kp H    &mt RSHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &kp RCTRL  &trans
-&kp CAPS  &kp Z        &kp X           &kp C           &kp V         &kp B        &kp N    &kp M         &kp BACKSPACE    &kp DEL          &trans     &kp GLOBE
+&kp TAB   &kp Q        &kp W           &kp E           &kp R         &lt 3 T      &kp Y    &kp U         &kp I            &kp O            &kp P      &bspc_or_del
+&kp CAPS  &mt LCTRL A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LSHIFT F  &kp G        &kp H    &mt RSHIFT J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &kp RCTRL  &kp ESC
+&trans    &kp Z        &kp X           &kp C           &kp V         &kp B        &kp N    &kp M         &trans           &trans           &trans     &kp GLOBE
                                        &mo 2           &mo 1         &kp SPACE    &kp RET  &mo 2         &mo 1
             >;
         };
@@ -77,10 +77,10 @@
 
             display-name = "Nums";
             bindings = <
-&kp F1      &kp F2                 &kp F3                    &kp F4                    &kp F5                  &kp F6             &kp F7           &kp F8                  &kp F9                     &kp F10                    &kp F11                &kp F12
-&trans      &mt LCTRL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_GUI KP_NUMBER_3  &mt LSHIFT KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &mt RSHIFT KP_NUMBER_7  &mt RIGHT_GUI KP_NUMBER_8  &mt RIGHT_ALT KP_NUMBER_9  &mt RCTRL KP_NUMBER_0  &trans
-&bt BT_CLR  &bt BT_SEL 0           &bt BT_SEL 1              &bt BT_SEL 2              &bt BT_SEL 3            &bt BT_SEL 4       &trans           &kp C_MUTE              &kp C_VOL_DN               &kp C_VOL_UP               &kp C_PP               &trans
-                                                             &trans                    &trans                  &trans             &trans           &trans                  &trans
+&kp F1      &kp F2              &kp F3                 &kp F4                 &kp F5               &kp F6          &kp F7        &kp F8               &kp F9                  &kp F10                 &kp F11             &kp F12
+&trans      &mt LCTRL NUMBER_1  &mt LEFT_ALT NUMBER_2  &mt LEFT_GUI NUMBER_3  &mt LSHIFT NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &mt RSHIFT NUMBER_7  &mt RIGHT_GUI NUMBER_8  &mt RIGHT_ALT NUMBER_9  &mt RCTRL NUMBER_0  &trans
+&bt BT_CLR  &bt BT_SEL 0        &bt BT_SEL 1           &bt BT_SEL 2           &bt BT_SEL 3         &bt BT_SEL 4    &trans        &kp C_MUTE           &kp C_VOL_DN            &kp C_VOL_UP            &kp C_PP            &trans
+                                                       &trans                 &trans               &trans          &trans        &trans               &trans
             >;
         };
 
