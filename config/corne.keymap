@@ -95,10 +95,10 @@
 
             display-name = "Symbols";
             bindings = <
-&trans  &kp STAR         &kp EXCL           &kp LPAR                   &kp RPAR                  &kp PRCNT    &kp CARET      &kp AMPS        &kp HASH          &kp DLLR                    &kp AT           &trans
-&trans  &mt LCTRL GRAVE  &mt LEFT_ALT PIPE  &mt LEFT_GUI LEFT_BRACKET  &mt LSHIFT RIGHT_BRACKET  &kp EQUAL    &kp COLON      &mt RSHIFT DQT  &mt RIGHT_GUI LT  &mt RIGHT_ALT GREATER_THAN  &mt RCTRL SLASH  &trans
-&trans  &kp TILDE        &kp BACKSLASH      &kp LBRC                   &kp RBRC                  &kp PLUS     &kp SEMICOLON  &kp SQT         &kp COMMA         &kp PERIOD                  &kp QMARK        &trans
-                                            &trans                     &trans                    &kp MINUS    &trans         &trans          &trans
+&trans      &kp STAR         &kp EXCL           &kp LPAR                   &kp RPAR                  &kp PRCNT    &kp CARET      &kp AMPS        &kp HASH          &kp DLLR                    &kp AT           &trans
+&trans      &mt LCTRL GRAVE  &mt LEFT_ALT PIPE  &mt LEFT_GUI LEFT_BRACKET  &mt LSHIFT RIGHT_BRACKET  &kp EQUAL    &kp COLON      &mt RSHIFT DQT  &mt RIGHT_GUI LT  &mt RIGHT_ALT GREATER_THAN  &mt RCTRL SLASH  &trans
+&kp LSHIFT  &kp TILDE        &kp BACKSLASH      &kp LBRC                   &kp RBRC                  &kp PLUS     &kp SEMICOLON  &kp SQT         &kp COMMA         &kp PERIOD                  &kp QMARK        &trans
+                                                &trans                     &trans                    &kp MINUS    &trans         &trans          &trans
             >;
         };
 
